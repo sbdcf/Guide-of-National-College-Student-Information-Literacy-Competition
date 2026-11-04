@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "q-tmp-yourname-1",
+  "type": "single",
+  "title": "一句话概括这道题",
+  "stem": "题干逐字照抄，不要改写。",
+  "stem_images": [],
+  "options": [
+    { "key": "A", "text": "选项一" },
+    { "key": "B", "text": "选项二" },
+    { "key": "C", "text": "选项三" },
+    { "key": "D", "text": "选项四" }
+  ],
+  "answer": [],
+  "answer_status": "pending",
+  "issues": [],
+  "explain": "",
+  "evidence": {
+    "database_id": "",
+    "query": "",
+    "steps": ""
+  },
+  "verification": [],
+  "taxonomy": [],
+  "exam_year": 2026,
+  "round": "校赛",
+  "source": "",
+  "source_ref": "",
+  "difficulty": 2,
+  "duplicate_of": null,
+  "contributor": "",
+  "created": "2026-11-05",
+  "updated": "2026-11-05"
+}

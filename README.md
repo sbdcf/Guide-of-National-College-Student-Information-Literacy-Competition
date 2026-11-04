@@ -70,8 +70,11 @@ mkdocs serve
 
 ## 贡献
 
-- 发现内容错误 → 开 Issue
-- 想加题目 → 见「题库 → 贡献题目」页
+见 [贡献指南](https://sbdcf.github.io/Guide-of-National-College-Student-Information-Literacy-Competition/contributing/)（或仓库内 [CONTRIBUTING.md](CONTRIBUTING.md) 速览版）。
+
+- 报错、提问、建议 → 开 Issue（有模板）
+- 交题 → 网页上传 `data/questions/q-tmp-*.json`，字段说明见贡献指南
+- 改文字 → 网页编辑 Markdown，提交时选「新建分支 + Propose changes」，别直推 `main`
 
 ## 许可
 

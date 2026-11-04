@@ -39,6 +39,7 @@ theme:
 nav:
   - 首页: index.md
   - 比赛概况: about/index.md
+  - 贡献指南: contributing/index.md
 
 markdown_extensions:
   - admonition

@@ -1,0 +1,47 @@
+name: 题目纠错
+description: 报告一道题的答案、题干或依据有问题
+title: "[纠错] "
+labels: ["纠错"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你帮忙把关。填得越具体，处理越快。
+  - type: input
+    id: page
+    attributes:
+      label: 哪道题 / 哪个页面
+      description: 贴链接，或者写清题号
+      placeholder: https://sbdcf.github.io/.../bank/q/q-0023/
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 哪里错了
+      placeholder: 答案写的是 C，但我查到的是 B
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: 正确答案应该是什么
+      validations:
+        required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 依据
+      description: 哪个数据库、什么检索式、看到什么结果。有链接更好。
+      placeholder: |
+        数据库：CNKI
+        检索式：主题=生态安全格局 AND 单位=浙江大学
+        操作：按被引排序，取第一篇
+        结果：王竹《乡村人居---策略》
+    validations:
+      required: true
+  - type: input
+    id: who
+    attributes:
+      label: 怎么称呼你（可留空）
+      description: 想出现在更新日志里就填

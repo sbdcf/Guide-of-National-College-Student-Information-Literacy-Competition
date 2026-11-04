@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "note": "受控词表。提交题目时 taxonomy 与 evidence.database_id 只能填这里的 id，不接受自由文本。初版仅收录已确认的条目，随考点范围整理继续扩充。",
+  "topics": [
+    { "id": "t-biblio", "name": "文献与书目基础" },
+    { "id": "t-ccl", "name": "中国图书馆分类法" },
+    { "id": "t-literature", "name": "文献类型与著录格式" },
+    { "id": "t-search-basic", "name": "检索基础知识" },
+    { "id": "t-boolean", "name": "布尔逻辑与检索式构造" },
+    { "id": "t-search-advanced", "name": "高级检索与专业检索" },
+    { "id": "t-db-cnki", "name": "CNKI 检索" },
+    { "id": "t-db-wanfang", "name": "万方数据检索" },
+    { "id": "t-db-vip", "name": "维普检索" },
+    { "id": "t-open-data", "name": "开放数据与政府信息" },
+    { "id": "t-ai-tools", "name": "生成式 AI 工具应用" },
+    { "id": "t-ethics", "name": "学术规范与信息伦理" }
+  ],
+  "databases": [
+    { "id": "cnki", "name": "中国知网 CNKI" },
+    { "id": "wanfang", "name": "万方数据" },
+    { "id": "vip", "name": "维普中文期刊" },
+    { "id": "nlc-opac", "name": "中国国家图书馆联机目录" },
+    { "id": "gov-open", "name": "政府开放数据平台" },
+    { "id": "web", "name": "通用网络检索" }
+  ],
+  "question_types": [
+    { "id": "single", "name": "单选题" },
+    { "id": "multiple", "name": "多选题" },
+    { "id": "judge", "name": "判断题" }
+  ],
+  "rounds": ["校赛", "省赛", "全国联赛"]
+}

@@ -1,0 +1,36 @@
+name: 补充考点或经验
+description: 分享比赛经验、补充考点说明、指出失效链接
+title: "[补充] "
+labels: ["内容补充"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        经验类内容尤其欢迎——考过的人写的「这题怎么查」比任何攻略都管用。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      options:
+        - 参赛经验 / 备考方法
+        - 考点说明补充
+        - 链接失效
+        - 页面错字
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: 内容
+      description: 想加什么、改什么，直接写正文也行
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: 相关页面（可选）
+  - type: input
+    id: who
+    attributes:
+      label: 怎么称呼你（可留空）
