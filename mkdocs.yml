@@ -1,9 +1,9 @@
 site_name: AI+信息素养大赛备考站
 site_description: 中国移动杯·第二届浙江省大学生人工智能竞赛「AI+信息素养」专项赛备考资料，由学校信息素养部（学生社团）整理
 site_author: 信息素养部
-site_url: https://<你的GitHub用户名>.github.io/aixx-guide/
-repo_url: https://github.com/<你的GitHub用户名>/aixx-guide
-repo_name: aixx-guide
+site_url: https://sbdcf.github.io/Guide-of-National-College-Student-Information-Literacy-Competition/
+repo_url: https://github.com/sbdcf/Guide-of-National-College-Student-Information-Literacy-Competition
+repo_name: sbdcf/Guide-of-National-College-Student-Information-Literacy-Competition
 docs_dir: docs
 use_directory_urls: true
 
