@@ -1,0 +1,68 @@
+site_name: AI+信息素养大赛备考站
+site_description: 中国移动杯·第二届浙江省大学生人工智能竞赛「AI+信息素养」专项赛备考资料，由学校信息素养部（学生社团）整理
+site_author: 信息素养部
+site_url: https://<你的GitHub用户名>.github.io/aixx-guide/
+repo_url: https://github.com/<你的GitHub用户名>/aixx-guide
+repo_name: aixx-guide
+docs_dir: docs
+use_directory_urls: true
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+
+nav:
+  - 首页: index.md
+  - 比赛概况: about/index.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+      # 中文必须按字切分才能搜到：Material 默认只按空白/连字符切词，
+      # 中文整句会变成单个 token，导致「信息素养」搜不到。
+      separator: '[\s\u200b\-]|(?<=[\u4e00-\u9fa5])|(?=[\u4e00-\u9fa5])'
+
+extra:
+  generator: false
+
+copyright: 信息素养部（学生社团）整理 · 内容仅供参考，以官方通知为准

@@ -1,0 +1,17 @@
+# 构建产物
+site/
+.cache/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# 编辑器
+.vscode/
+.idea/
+.DS_Store
+
+# 本地临时
+_work/
+*.log
