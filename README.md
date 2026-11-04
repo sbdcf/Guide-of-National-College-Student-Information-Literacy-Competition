@@ -2,9 +2,9 @@
 
 面向本校同学（以及任何想了解这个比赛的人）的备考资料站。
 
-**在线访问**：部署后填写实际地址
+**在线访问**：[AI+信息素养大赛备考站](https://sbdcf.github.io/Guide-of-National-College-Student-Information-Literacy-Competition/)
 
-> 本站由学校信息素养部（学生社团）整理，内容仅供参考，一切以官方通知为准。
+> 本站由学校AI+信息素养社整理，内容仅供参考，一切以官方通知为准。
 
 ---
 
@@ -33,40 +33,6 @@ tools/
   builder.html   离线出题器
   validate.py    CI 校验
 ```
-
-## 本地预览
-
-```bash
-python -m venv .venv
-.venv/Scripts/activate      # Windows
-pip install -r requirements.txt
-mkdocs serve
-```
-
-打开 http://127.0.0.1:8000 。
-
-## 部署
-
-推送到 `main` 分支即由 GitHub Actions 自动构建并发布到 GitHub Pages。
-
-首次部署前需要：
-
-1. 把 `mkdocs.yml` 里的 `<你的GitHub用户名>` 全部替换成实际用户名（`site_url` 与 `repo_url` 两处）。
-2. 在仓库 Settings → Pages → Source 里选择 **GitHub Actions**。
-
-## 维护者交接
-
-> 这一节是给下一任负责人看的。社团会换届，作者 2027 年毕业，务必按下面做。
-
-- **权限**：仓库所有者把下一任负责人加为 Collaborator（Settings → Collaborators），确认对方能推代码后，再到 Settings → General 底部 **Transfer ownership** 把仓库转走。
-- **每年要改的地方**（比赛约在赛年 6–7 月发通知）：
-  1. 届次与年份（标题、`mkdocs.yml` 的 `site_name`、前言）
-  2. 报名与各阶段时间节点
-  3. 官方平台链接（高职 `cscgz.zhixinst.com`、本硕 `csc.xxsuyang.com`、省级官网 `zjcsc.nczxst.com`）
-  4. 考点大纲变化
-  5. 上一届真题入库
-  6. 题库里过期题重新核验
-- **数据都在文本里**：题目是 `data/questions/*.json`，不要把题库只留在 Word 里。
 
 ## 贡献
 
