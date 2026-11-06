@@ -26,8 +26,6 @@ body:
     id: correct
     attributes:
       label: 正确答案应该是什么
-      validations:
-        required: true
   - type: textarea
     id: evidence
     attributes:
