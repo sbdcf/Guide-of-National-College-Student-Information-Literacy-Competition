@@ -110,10 +110,10 @@
 | `title` | ✅ | 一句话概括，用于列表和搜索结果，别直接截题干 |
 | `stem` | ✅ | 题干纯文本。**逐字照抄，不要自己改写** |
 | `stem_images` | | 题干配图的路径数组，没有就写 `[]` |
-| `options` | ✅ | 选项数组。判断题固定两项：`正确` / `错误` |
-| `answer` | ✅ | 答案数组。**不知道就写 `[]`**，配套 `answer_status: "pending"` |
+| `options` | ✅ | 选项数组。判断题固定两项：`A. 正确` / `B. 错误` |
+| `answer` | ✅ | 答案数组，**填选项的 key**，比如 `["B"]`、`["A","C"]`（判断题写 `["A"]` / `["B"]`，不要写「正确」）。不知道就写 `[]`，配套 `answer_status: "pending"` |
 | `answer_status` | ✅ | `pending` 待答 / `verified` 已核验 / `disputed` 有争议 / `expired` 已过期 |
-| `issues` | | 题目本身的缺陷：`missing_option`、`needs_review`、`unclear_source` |
+| `issues` | | 题目本身的缺陷：`missing_option` 选项缺项、`stem_image_missing` 原题配图没取到、`needs_review` 待复核、`unclear_source` 来源不明 |
 | `explain` | | 讲「**为什么**是这个答案」。写规则、写知识点 |
 | `evidence` | ✅ | 讲「**怎么查**出来的」，见下 |
 | `verification` | | 核验记录 `{date, by, result}`，`result` 取 `confirmed` / `changed` / `not_found` |
@@ -150,6 +150,18 @@
 **3. `taxonomy` 只能填词表里的 id。**
 
 不要写「中图法」「中国图书馆分类法」这种自由文本——同一个概念会冒出三种写法，筛选器当场报废。词表在 `data/taxonomy.json`，没有合适的就先空着，在 PR 里说一声。
+
+**4. 判断题的 `answer` 填 `A` / `B`，不要填「正确」「错误」。**
+
+判断题的选项是固定的两项：`{"key": "A", "text": "正确"}`、`{"key": "B", "text": "错误"}`。`answer` 里放的永远是**选项 key**，所以对的是 `["A"]`，错的是 `["B"]`。写了「正确」会在 CI 里报「答案不在选项里」。
+
+---
+
+## 题目页是自动生成的，别手改
+
+题库里每一页（`/questions/xxx/`）都是构建时由 `tools/build_questions.py` 从 `data/questions/*.json` 生成的，仓库里没有这些 Markdown 文件。**想改题目内容，改 JSON**——改页面会被下次构建覆盖。
+
+页面上那些「同考点其他题目」、分布统计、在线练习用的数据包，全都是从 JSON 算出来的。
 
 ---
 
