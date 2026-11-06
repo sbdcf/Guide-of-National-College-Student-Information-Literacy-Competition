@@ -1,0 +1,210 @@
+/* 在线练习页的样式。尽量只用 Material 自己的 CSS 变量，深浅色自动跟随。 */
+
+#quiz-app {
+  margin-top: 1rem;
+}
+
+.quiz-panel {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.4rem;
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.quiz-panel h3 {
+  margin-top: 0;
+  font-size: 0.95rem;
+}
+
+.quiz-fieldset {
+  border: 0;
+  margin: 0 0 0.9rem;
+  padding: 0;
+}
+
+.quiz-fieldset legend {
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.quiz-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.quiz-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.quiz-chip input {
+  margin: 0;
+}
+
+.quiz-chip:has(input:checked) {
+  border-color: var(--md-primary-fg-color);
+  background: var(--md-primary-fg-color--transparent);
+  color: var(--md-primary-fg-color);
+}
+
+.quiz-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.quiz-btn {
+  font-size: 0.78rem;
+  padding: 0.45rem 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--md-primary-fg-color);
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  cursor: pointer;
+}
+
+.quiz-btn--ghost {
+  background: transparent;
+  color: var(--md-primary-fg-color);
+}
+
+.quiz-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.quiz-progress {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.quiz-stem {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0.2rem 0 1rem;
+  white-space: pre-wrap;
+}
+
+.quiz-stem img {
+  max-width: 100%;
+  border-radius: 0.25rem;
+  margin: 0.5rem 0;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quiz-opt {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  transition: border-color 0.15s ease;
+}
+
+.quiz-opt:hover {
+  border-color: var(--md-primary-fg-color);
+}
+
+.quiz-opt.is-picked {
+  border-color: var(--md-primary-fg-color);
+  background: var(--md-primary-fg-color--transparent);
+}
+
+.quiz-opt-key {
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  flex: 0 0 auto;
+}
+
+.quiz-opt-text {
+  flex: 1 1 auto;
+}
+
+.quiz-flag {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 0.2rem;
+  background: var(--md-typeset-mark);
+  color: var(--md-default-fg-color);
+  margin-left: 0.4rem;
+}
+
+.quiz-result-line {
+  font-size: 0.85rem;
+  margin: 0.3rem 0 0.8rem;
+}
+
+.quiz-score {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+}
+
+.quiz-review {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  padding-top: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.quiz-review-item {
+  margin-bottom: 0.9rem;
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.quiz-review-item .quiz-judge-ok {
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.quiz-review-item .quiz-judge-no {
+  color: #c62828;
+  font-weight: 700;
+}
+
+.quiz-explain {
+  margin-top: 0.35rem;
+  padding: 0.5rem 0.7rem;
+  border-left: 3px solid var(--md-primary-fg-color);
+  background: var(--md-code-bg-color);
+  border-radius: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.quiz-loading,
+.quiz-error {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.quiz-empty {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .quiz-panel {
+    padding: 0.8rem;
+  }
+}

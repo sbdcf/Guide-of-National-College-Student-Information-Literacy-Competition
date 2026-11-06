@@ -2,6 +2,10 @@
 site/
 .cache/
 
+# 由 tools/build_questions.py 生成，不要提交
+docs/questions/
+docs/assets/data/
+
 # Python
 .venv/
 __pycache__/

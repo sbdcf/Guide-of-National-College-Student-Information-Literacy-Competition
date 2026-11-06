@@ -44,6 +44,9 @@ nav:
       - 赛前准备: guide/prepare.md
       - 答题要点: guide/tips.md
       - 真题讲解: guide/case-study.md
+  - 题库:
+      - 题库总览: questions/index.md
+      - 在线练习: practice/index.md
   - 贡献指南: contributing/index.md
 
 markdown_extensions:
@@ -70,5 +73,8 @@ plugins:
 
 extra:
   generator: false
+
+extra_css:
+  - assets/css/extra.css
 
 copyright: 信息素养部（学生社团）整理 · 内容仅供参考，以官方通知为准
